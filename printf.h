@@ -6,7 +6,7 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 18:08:09 by nkreter           #+#    #+#             */
-/*   Updated: 2026/10/06 17:48:09 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/10/06 22:15:52 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ int	print_s(char *str);
 int	print_p(void *p);
 int	print_di(int n);
 int	print_u(unsigned int n);
-int	print_hex(unsigned int n);
+int	print_hex(unsigned int n, char type);
 
 #endif

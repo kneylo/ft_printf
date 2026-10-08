@@ -6,7 +6,7 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 01:00:39 by nkreter           #+#    #+#             */
-/*   Updated: 2026/10/06 19:45:54 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/10/06 22:56:48 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@ int	print_p(void *p)
 	int	tmp;
 
 	if (!p)
-	{
-		tmp = print_s("(nil)");
-		if (tmp == -1)
-			return (-1);
-	}
+		return (print_s("(nil)"));
+	count += print_s("0x");
+	count += print_hex((unsigned int)p, x);
+	return (count);
 }

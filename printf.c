@@ -6,7 +6,13 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 01:00:48 by nkreter           #+#    #+#             */
-/*   Updated: 2026/10/03 01:00:50 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/10/06 22:53:06 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "printf.h"
+
+int	printf(const char *str, ...)
+{
+	
+}
