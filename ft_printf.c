@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.c                                           :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 01:00:48 by nkreter           #+#    #+#             */
-/*   Updated: 2026/10/12 16:47:30 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/10/13 01:12:00 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	is_in(char c)
 {
@@ -31,7 +31,7 @@ static int	is_in(char c)
 static int	conversion(char type, va_list *ap)
 {
 	if (type == 'c')
-		return (print_c((char)va_arg(*ap, int)))
+		return (print_c((char)va_arg(*ap, int)));
 	else if (type == 's')
 		return (print_s(va_arg(*ap, char *)));
 	else if (type == 'd' || type == 'i')
@@ -43,27 +43,25 @@ static int	conversion(char type, va_list *ap)
 	else if (type == 'x' || type == 'X')
 	{
 		if (type == 'x')
-			return (print_hex(va_arg(*ap, type)));
+			return (print_hex(va_arg(*ap, unsigned long), HEX_L));
 		else
-			return (print_hex(va_arg(*ap, type)));
+			return (print_hex(va_arg(*ap, unsigned long), HEX_H));
 	}
 	else if (type == '%')
 		return (print_c('%'));
 	return (0);
 }
 
-int	printf(const char *s, ...)
+int	ft_printf(const char *s, ...)
 {
 	int		res;
 	va_list	ap;
 	int	count;
-	
-	if (!s)
-		return (-1);
+
 	va_start(ap, s);
 	while (*s)
 	{
-		if (*s == '%' && is_in(s + 1))
+		if (*s == '%' && is_in(*(s + 1)))
 		{
 			res = conversion(*s + 1, &ap);
 			s++;

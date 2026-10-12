@@ -6,18 +6,31 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 01:00:39 by nkreter           #+#    #+#             */
-/*   Updated: 2026/10/06 22:56:48 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/10/13 01:12:38 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	print_p(void *p)
 {
 	int	count;
-	int	tmp;
-
+	int	res;
+	
 	if (!p)
-		return (print_s("(nil)"));
-	count += print_s("0x");
-	count += print_hex((unsigned int)p, x);
-	return (count);
+	{
+		res = print_s("(nil)");
+		if (res == -1)
+			return (-1);
+		return (res);
+	}
+	count = 0;
+	res = print_s("0x");
+	if (res == -1)
+		return (-1);
+	count += res;
+	res = print_hex((unsigned long)p, HEX_L);
+	if (res == -1)
+		return (-1);
+	return (count + res);
 }

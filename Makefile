@@ -6,7 +6,7 @@
 #    By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/02 18:07:37 by nkreter           #+#    #+#              #
-#    Updated: 2026/10/12 14:49:47 by nkreter          ###   ########.fr        #
+#    Updated: 2026/10/13 01:07:33 by nkreter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,7 @@ SRC = 	print_c.c \
 		print_u.c \
 		print_di.c \
 		print_hex.c \
-		printf.c \
-		print_prct.c \
+		ft_printf.c \
 		print_p.c
 
 OBJ = $(SRC:.c=.o)
@@ -27,8 +26,10 @@ CC			=		cc
 RM			=		rm -f
 CFLAGS		=		-Wall -Wextra -Werror
 
-NAME:	$(OBJ)
-			ar rcs $(NAME) $(OBJ)
+all:		$(NAME)
+
+$(NAME):	$(OBJ)
+				ar rcs $(NAME) $(OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
