@@ -6,7 +6,7 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 01:00:48 by nkreter           #+#    #+#             */
-/*   Updated: 2026/10/13 01:12:00 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/10/13 01:27:30 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,15 @@ int	ft_printf(const char *s, ...)
 	va_list	ap;
 	int	count;
 
+	count = 0;
+	res = 0;
 	va_start(ap, s);
 	while (*s)
 	{
 		if (*s == '%' && is_in(*(s + 1)))
 		{
-			res = conversion(*s + 1, &ap);
-			s++;
+			res = conversion(*(s + 1), &ap);
+			s += 2;
 		}
 		else
 			res = print_c(*s++);
