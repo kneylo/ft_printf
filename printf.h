@@ -6,7 +6,7 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 18:08:09 by nkreter           #+#    #+#             */
-/*   Updated: 2026/10/06 22:15:52 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/10/12 14:49:55 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 # define HEX_L "0123456789abcdef"
 # define HEX_H "0123456789ABCDEF"
-
+ 
 int	printf(const char *str, ...);
 int	print_c(char c);
 int	print_s(char *str);
