@@ -6,7 +6,7 @@
 #    By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/02 18:07:37 by nkreter           #+#    #+#              #
-#    Updated: 2026/10/13 01:07:33 by nkreter          ###   ########.fr        #
+#    Updated: 2026/10/14 18:18:10 by nkreter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ NAME = libftprintf.a
 
 CC			=		cc
 RM			=		rm -f
-CFLAGS		=		-Wall -Wextra -Werror
+CFLAGS		=		-Wall -Wextra -Werror -I.
 
 all:		$(NAME)
 

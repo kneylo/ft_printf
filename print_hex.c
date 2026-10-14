@@ -6,7 +6,7 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 01:00:37 by nkreter           #+#    #+#             */
-/*   Updated: 2026/10/13 01:12:35 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/10/15 01:08:12 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	print_hex(unsigned long n, char *base)
 	int		res;
 
 	count = 0;
+	res = 0;
 	if (n >= 16)
 	{
 		res = print_hex(n / 16, base);

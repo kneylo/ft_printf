@@ -6,7 +6,7 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 01:00:48 by nkreter           #+#    #+#             */
-/*   Updated: 2026/10/13 01:27:30 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/10/14 17:58:30 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ static int	conversion(char type, va_list *ap)
 	else if (type == 'x' || type == 'X')
 	{
 		if (type == 'x')
-			return (print_hex(va_arg(*ap, unsigned long), HEX_L));
+			return (print_hex(va_arg(*ap, unsigned int), HEX_L));
 		else
-			return (print_hex(va_arg(*ap, unsigned long), HEX_H));
+			return (print_hex(va_arg(*ap, unsigned int), HEX_H));
 	}
 	else if (type == '%')
 		return (print_c('%'));
@@ -56,7 +56,7 @@ int	ft_printf(const char *s, ...)
 {
 	int		res;
 	va_list	ap;
-	int	count;
+	int		count;
 
 	count = 0;
 	res = 0;
