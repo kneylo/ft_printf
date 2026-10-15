@@ -6,7 +6,7 @@
 /*   By: nkreter <nkreter@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 01:00:39 by nkreter           #+#    #+#             */
-/*   Updated: 2026/10/13 01:12:38 by nkreter          ###   ########.fr       */
+/*   Updated: 2026/10/15 03:04:58 by nkreter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	print_p(void *p)
 {
 	int	count;
 	int	res;
-	
+
 	if (!p)
 	{
 		res = print_s("(nil)");
