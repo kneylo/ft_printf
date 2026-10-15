@@ -8,7 +8,6 @@
 *.elf
 
 #tester
-main.c
 printftester/
 
 # Linker output
